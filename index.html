@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skyboy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+
+</head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyboy - Elevando seu E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        skyboyBlue: '#00A8E8',
+                        skyboyDark: '#003459',
+                        skyboyLight: '#E6F7FF',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #00A8E8 0%, #003459 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center">
+                        <i class="fas fa-rocket text-skyboyBlue text-3xl mr-2"></i>
+                        <span class="text-skyboyDark text-2xl font-bold">SKYBOY</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-skyboyDark hover:text-skyboyBlue font-medium">Início</a>
+                        <a href="#features" class="text-skyboyDark hover:text-skyboyBlue font-medium">Recursos</a>
+                        <a href="#pricing" class="text-skyboyDark hover:text-skyboyBlue font-medium">Planos</a>
+                        <a href="#testimonials" class="text-skyboyDark hover:text-skyboyBlue font-medium">Depoimentos</a>
+                        <a href="#contact" class="text-skyboyDark hover:text-skyboyBlue font-medium">Contato</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="ml-8 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-skyboyBlue hover:bg-skyboyDark transition duration-300">
+                        Comece agora
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-skyboyDark hover:text-skyboyBlue focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-skyboyDark hover:text-skyboyBlue hover:bg-skyboyLight">Início</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-skyboyDark hover:text-skyboyBlue hover:bg-skyboyLight">Recursos</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-skyboyDark hover:text-skyboyBlue hover:bg-skyboyLight">Planos</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-skyboyDark hover:text-skyboyBlue hover:bg-skyboyLight">Depoimentos</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-skyboyDark hover:text-skyboyBlue hover:bg-skyboyLight">Contato</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-skyboyBlue hover:bg-skyboyDark">
+                    Comece agora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Eleve seu E-commerce com a <span class="text-yellow-300">Skyboy</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        A plataforma completa para impulsionar suas vendas online e levar sua loja virtual às alturas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#pricing" class="bg-white text-skyboyDark hover:bg-gray-100 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            Ver Planos
+                        </a>
+                        <a href="#contact" class="border-2 border-white hover:bg-white hover:text-skyboyDark font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            Fale Conosco
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="E-commerce Dashboard" 
+                         class="rounded-xl shadow-2xl w-full max-w-md border-4 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-skyboyBlue mb-2">+500</div>
+                    <div class="text-gray-600">Lojas Atendidas</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-skyboyBlue mb-2">+90%</div>
+                    <div class="text-gray-600">Aumento nas Vendas</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-skyboyBlue mb-2">24/7</div>
+                    <div class="text-gray-600">Suporte Especializado</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-skyboyBlue mb-2">99.9%</div>
+                    <div class="text-gray-600">Disponibilidade</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-skyboyLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-skyboyDark mb-4">Recursos Exclusivos</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tudo que você precisa para transformar seu e-commerce em um sucesso de vendas
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg feature-card transition duration-300">
+                    <div class="w-16 h-16 bg-skyboyBlue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-skyboyBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-skyboyDark mb-3">Dashboard Inteligente</h3>
+                    <p class="text-gray-600">
+                        Acompanhe em tempo real todas as métricas do seu negócio com nossa plataforma de analytics avançada.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg feature-card transition duration-300">
+                    <div class="w-16 h-16 bg-skyboyBlue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-skyboyBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-skyboyDark mb-3">Design Responsivo</h3>
+                    <p class="text-gray-600">
+                        Loja otimizada para todos os dispositivos, garantindo a melhor experiência para seus clientes.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg feature-card transition duration-300">
+                    <div class="w-16 h-16 bg-skyboyBlue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lock text-skyboyBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-skyboyDark mb-3">Segurança Máxima</h3>
+                    <p class="text-gray-600">
+                        Proteção avançada contra fraudes e criptografia de dados para você e seus clientes.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg feature-card transition duration-300">
+                    <div class="w-16 h-16 bg-skyboyBlue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-skyboyBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-skyboyDark mb-3">Chatbot Inteligente</h3>
+                    <p class="text-gray-600">
+                        Atendimento automático 24 horas para tirar dúvidas e aumentar a conversão de vendas.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg feature-card transition duration-300">
+                    <div class="w-16 h-16 bg-skyboyBlue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-truck text-skyboyBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-skyboyDark mb-3">Integração de Frete</h3>
+                    <p class="text-gray-600">
+                        Calculadora de frete em tempo real com todas as principais transportadoras do mercado.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg feature-card transition duration-300">
+                    <div class="w-16 h-16 bg-skyboyBlue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-skyboyBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-skyboyDark mb-3">Marketing Integrado</h3>
+                    <p class="text-gray-600">
+                        Ferramentas completas de email marketing, cupons de desconto e promoções inteligentes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-skyboyDark mb-4">Como Funciona</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Em apenas 4 passos simples, sua loja estará no ar e vendendo
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-skyboyBlue transform -translate-x-1/2"></div>
+                
+                <!-- Steps -->
+                <div class="space-y-16 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-skyboyBlue text-white flex items-center justify-center text-xl font-bold mb-4 md:mb-0">
+                            1
+                        </div>
+                        <div class="md:ml-8 md:w-1/2 md:pr-16">
+                            <h3 class="text-xl font-bold text-skyboyDark mb-2">Cadastro e Configuração</h3>
+                            <p class="text-gray-600">
+                                Crie sua conta e personalize sua loja com nosso assistente de configuração fácil de usar.
+                            </p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pl-16">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Cadastro" 
+                                 class="rounded-lg shadow-md w-full">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-skyboyBlue text-white flex items-center justify-center text-xl font-bold mb-4 md:mb-0">
+                            2
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pr-16">
+                            <img src="https://images.unsplash.com/photo-1556742044-01c8ddc42c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                 alt="Produtos" 
+                                 class="rounded-lg shadow-md w-full">
+                        </div>
+                        <div class="md:ml-8 md:w-1/2 md:pl-16">
+                            <h3 class="text-xl font-bold text-skyboyDark mb-2">Adicione Seus Produtos</h3>
+                            <p class="text-gray-600">
+                                Importe seu catálogo de produtos com fotos, descrições e preços de forma rápida e organizada.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-skyboyBlue text-white flex items-center justify-center text-xl font-bold mb-4 md:mb-0">
+                            3
+                        </div>
+                        <div class="md:ml-8 md:w-1/2 md:pr-16">
+                            <h3 class="text-xl font-bold text-skyboyDark mb-2">Personalize Seu Design</h3>
+                            <p class="text-gray-600">
+                                Escolha entre nossos templates profissionais ou crie um design único para sua marca.
+                            </p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pl-16">
+                            <img src="https://images.unsplash.com/photo-1556742045-e0fef705b9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Design" 
+                                 class="rounded-lg shadow-md w-full">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-skyboyBlue text-white flex items-center justify-center text-xl font-bold mb-4 md:mb-0">
+                            4
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pr-16">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Lançamento" 
+                                 class="rounded-lg shadow-md w-full">
+                        </div>
+                        <div class="md:ml-8 md:w-1/2 md:pl-16">
+                            <h3 class="text-xl font-bold text-skyboyDark mb-2">Lance Sua Loja</h3>
+                            <p class="text-gray-600">
+                                Publique com um clique e comece a vender imediatamente com nosso suporte completo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-skyboyLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-skyboyDark mb-4">Planos que Cabem no Seu Bolso</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Escolha o plano perfeito para o tamanho do seu negócio
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-skyboyDark mb-2">Básico</h3>
+                        <p class="text-gray-600 mb-6">Ideal para quem está começando</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-skyboyBlue">R$ 99</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Até 50 produtos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>1GB de armazenamento</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte por email</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Relatórios básicos</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-gray-200 hover:bg-skyboyBlue hover:text-white text-center font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Começar agora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan (Featured) -->
+                <div class="bg-white rounded-xl shadow-2xl transform scale-105 z-10 border-4 border-skyboyBlue">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-skyboyDark mb-2">Profissional</h3>
+                                <p class="text-gray-600">O mais popular</p>
+                            </div>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">RECOMENDADO</span>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-skyboyBlue">R$ 199</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Até 500 produtos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>5GB de armazenamento</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte prioritário</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Relatórios avançados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Integração com marketplaces</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-skyboyBlue hover:bg-skyboyDark text-white text-center font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Começar agora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-skyboyDark mb-2">Empresarial</h3>
+                        <p class="text-gray-600 mb-6">Para grandes negócios</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-skyboyBlue">R$ 499</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Produtos ilimitados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>20GB de armazenamento</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte 24/7</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Relatórios personalizados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Equipe dedicada</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-gray-200 hover:bg-skyboyBlue hover:text-white text-center font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Começar agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Precisa de um plano personalizado?</p>
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-skyboyBlue text-skyboyBlue font-bold rounded-lg hover:bg-skyboyBlue hover:text-white transition duration-300">
+                    Fale com nosso time
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-skyboyDark mb-4">O que nossos clientes dizem</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Veja como a Skyboy transformou negócios como o seu
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-skyboyLight rounded-xl p-8 shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" 
+                             alt="Maria Silva" 
+                             class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-skyboyDark">Maria Silva</h4>
+                            <p class="text-gray-600 text-sm">Moda Feminina</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "Depois de migrar para a Skyboy, minhas vendas aumentaram 120% em apenas 3 meses. A plataforma é incrivelmente fácil de usar e o suporte é excepcional!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-skyboyLight rounded-xl p-8 shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                             alt="Carlos Oliveira" 
+                             class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-skyboyDark">Carlos Oliveira</h4>
+                            <p class="text-gray-600 text-sm">Eletrônicos</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "Como loja de eletrônicos, precisávamos de uma solução robusta. A Skyboy superou todas as expectativas com sua velocidade e recursos avançados de inventário."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-skyboyLight rounded-xl p-8 shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" 
+                             alt="Ana Costa" 
+                             class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-skyboyDark">Ana Costa</h4>
+                            <p class="text-gray-600 text-sm">Cosméticos Naturais</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "O sistema de cupons e promoções da Skyboy me ajudou a fidelizar clientes e aumentar o ticket médio. Nunca foi tão fácil gerenciar minha loja online!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para elevar seu e-commerce?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Experimente a Skyboy gratuitamente por 14 dias e veja a diferença em suas vendas
+            </p>
+            <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white text-skyboyDark font-bold rounded-lg hover:bg-gray-100 transition duration-300 text-lg">
+                Comece seu teste grátis
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-skyboyDark mb-6">Fale Conosco</h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Tem dúvidas ou precisa de ajuda para escolher o melhor plano? Nosso time está pronto para te ajudar a alavancar seu negócio.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-skyboyDark mb-1">Endereço</h4>
+                                <p class="text-gray-600">Av. Paulista, 1000 - São Paulo/SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-skyboyDark mb-1">Telefone</h4>
+                                <p class="text-gray-600">(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-skyboyDark mb-1">Email</h4>
+                                <p class="text-gray-600">contato@skyboy.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-skyboyDark mb-4">Siga-nos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue hover:bg-skyboyBlue hover:text-white transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue hover:bg-skyboyBlue hover:text-white transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue hover:bg-skyboyBlue hover:text-white transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-skyboyLight rounded-full flex items-center justify-center text-skyboyBlue hover:bg-skyboyBlue hover:text-white transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-skyboyLight rounded-xl p-8 shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-skyboyDark font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-skyboyBlue focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-skyboyDark font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-skyboyBlue focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-skyboyDark font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-skyboyBlue focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-skyboyDark font-medium mb-2">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-skyboyBlue focus:border-transparent">
+                                <option value="">Selecione um assunto</option>
+                                <option value="sales">Vendas</option>
+                                <option value="support">Suporte</option>
+                                <option value="partnership">Parcerias</option>
+                                <option value="other">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-skyboyDark font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-skyboyBlue focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-skyboyBlue hover:bg-skyboyDark text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-skyboyLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-skyboyDark mb-4">Perguntas Frequentes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tire suas dúvidas sobre a plataforma Skyboy
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                            <h3 class="text-lg font-medium text-skyboyDark">Como faço para migrar minha loja atual para a Skyboy?</h3>
+                            <i class="fas fa-chevron-down text-skyboyBlue transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">
+                                Temos um processo de migração totalmente assistido pela nossa equipe. Basta entrar em contato conosco e fornecer os dados da sua loja atual. Nós cuidamos de toda a transferência de produtos, clientes e histórico de pedidos, garantindo que sua loja continue operando sem interrupções.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                            <h3 class="text-lg font-medium text-skyboyDark">Quais são os métodos de pagamento integrados?</h3>
+                            <i class="fas fa-chevron-down text-skyboyBlue transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">
+                                A Skyboy possui integração nativa com os principais gateways de pagamento do Brasil, incluindo PagSeguro, Mercado Pago, PayPal, Stripe e mais. Também oferecemos soluções para boletos bancários e transferências. Você pode ativar apenas os métodos que desejar utilizar em sua loja.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                            <h3 class="text-lg font-medium text-skyboyDark">Posso testar a plataforma antes de assinar?</h3>
+                            <i class="fas fa-chevron-down text-skyboyBlue transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">
+                                Sim! Oferecemos um período de teste gratuito de 14 dias, onde você pode explorar todos os recursos da plataforma sem compromisso. Durante esse período, nossa equipe de suporte está disponível para te ajudar a configurar sua loja e tirar todas as dúvidas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                            <h3 class="text-lg font-medium text-skyboyDark">Como funciona o suporte técnico?</h3>
+                            <i class="fas fa-chevron-down text-skyboyBlue transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">
+                                Oferecemos diferentes níveis de suporte de acordo com seu plano. No Básico, o suporte é por email com resposta em até 24h. Nos planos Profissional e Empresarial, oferecemos suporte por chat e telefone com resposta em até 2 horas. Também temos uma base de conhecimento completa com tutoriais e vídeos para você consultar a qualquer momento.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                            <h3 class="text-lg font-medium text-skyboyDark">Posso cancelar a qualquer momento?</h3>
+                            <i class="fas fa-chevron-down text-skyboyBlue transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">
+                                Sim, não há fidelidade nos planos da Skyboy. Você pode cancelar quando quiser através da sua área de cliente. Se cancelar no meio do período contratado, poderá continuar usando a plataforma até o final do ciclo de faturamento já pago.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-4">Não encontrou sua dúvida?</p>
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-skyboyBlue text-skyboyBlue font-bold rounded-lg hover:bg-skyboyBlue hover:text-white transition duration-300">
+                        Fale com nosso time
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-skyboyDark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-rocket text-skyboyBlue text-3xl mr-2"></i>
+                        <span class="text-2xl font-bold">SKYBOY</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        A plataforma completa para impulsionar suas vendas online e levar sua loja virtual às alturas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-skyboyBlue bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-skyboyBlue bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-skyboyBlue bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-skyboyBlue bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#features" class="text-gray-300 hover:text-white transition duration-300">Recursos</a></li>
+                        <li><a href="#pricing" class="text-gray-300 hover:text-white transition duration-300">Planos</a></li>
+                        <li><a href="#testimonials" class="text-gray-300 hover:text-white transition duration-300">Depoimentos</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Cookies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">
+                    © 2023 Skyboy. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-cc-visa text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-cc-mastercard text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-cc-paypal text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-skyboyBlue text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
